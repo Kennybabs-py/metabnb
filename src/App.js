@@ -1,7 +1,8 @@
+import RouteLinks from "routes";
 import "./App.css";
 
 function App() {
-  return <>gyy</>;
+  return <RouteLinks />;
 }
 
 export default App;
