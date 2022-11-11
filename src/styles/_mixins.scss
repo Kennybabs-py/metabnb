@@ -1,0 +1,42 @@
+@mixin border($color: black, $width: 1px) {
+  border: $width solid $color;
+}
+
+@mixin flex($align: center, $justify: center, $flow: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-flow: $flow;
+}
+
+@mixin grid {
+  display: grid;
+  place-items: center;
+}
+
+$breakpoints: (
+  "mobile": 600px,
+  "tablet": 900px,
+  "sm-desktop": 1125px,
+  "desktop": 1366px,
+) !default;
+
+@mixin mediaMax($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "#{$breakpoint} not found!. #{$breakpoint} must be included in object. " + " See available: #{map-keys($breakpoints)}";
+  }
+}
+
+@mixin mediaMin($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "#{$breakpoint} not found!. #{$breakpoint} must be included in object. " + " See available: #{map-keys($breakpoints)}";
+  }
+}
