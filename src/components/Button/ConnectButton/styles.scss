@@ -1,0 +1,17 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+button.connect_wallet__btn {
+  display: inline-block;
+  border: none;
+  width: 170px;
+  height: 48px;
+  border-radius: 10px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  @extend .purple_gradient;
+}

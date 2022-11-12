@@ -1,0 +1,61 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+header {
+  width: 100%;
+  padding: 2.7rem 0;
+
+  & > .container {
+    @include flex(center, space-between, row);
+    @extend .page_width;
+
+    & > figure {
+      max-width: 150px;
+      max-height: 30px;
+
+      @include mediaMin(tablet) {
+        max-width: 233px;
+        max-height: 37px;
+      }
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    & > nav {
+      display: none;
+
+      @include mediaMin(tablet) {
+        display: inherit;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        li {
+          a {
+            text-decoration: none;
+            color: $color-dark;
+            font-weight: 400;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+
+    & > button {
+      display: none;
+
+      @include mediaMin(tablet) {
+        display: inline-block;
+      }
+    }
+  }
+}

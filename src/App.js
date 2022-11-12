@@ -1,8 +1,14 @@
+import Header from "components/Header";
 import RouteLinks from "routes";
 import "./App.css";
 
 function App() {
-  return <RouteLinks />;
+  return (
+    <>
+      <Header />
+      <RouteLinks />
+    </>
+  );
 }
 
 export default App;
