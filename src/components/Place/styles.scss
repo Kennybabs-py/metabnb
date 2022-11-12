@@ -1,0 +1,48 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+div.place {
+  max-width: 292px;
+  padding: 1rem;
+  background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+  border: 1px solid $color-300;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  & > figure {
+    max-width: 260px;
+    max-height: 265px;
+    border: 1px solid $color-300;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+  }
+
+  & > .name__price {
+    @include flex(center, space-between, row);
+    margin-bottom: 10px;
+
+    & > span {
+      font-size: 0.75rem;
+      font-weight: 400;
+
+      &:last-of-type {
+        font-weight: 700;
+      }
+    }
+  }
+
+  & > .distance__available {
+    @include flex(center, space-between, row);
+
+    & > span {
+      font-size: 0.75rem;
+      font-weight: 400;
+    }
+  }
+}

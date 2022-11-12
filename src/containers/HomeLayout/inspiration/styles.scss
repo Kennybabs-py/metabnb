@@ -1,0 +1,20 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+section#inspiration {
+  width: 100%;
+
+  & > .container {
+    @extend .page_width;
+    padding: 3.6rem 0;
+    box-sizing: border-box;
+
+    & > h2 {
+      font-weight: 700;
+      font-size: clamp(2.5rem, 3.5vw, 3rem);
+      color: #000000;
+      text-align: center;
+    }
+  }
+}
