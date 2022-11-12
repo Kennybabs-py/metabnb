@@ -1,0 +1,52 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+section#metanfts {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  @extend .purple_gradient;
+
+  & > .container {
+    @extend .page_width;
+    padding: 3rem 0;
+    @include flex(center, center, row wrap);
+    gap: 4rem;
+    box-sizing: border-box;
+
+    @include mediaMin(tablet) {
+      padding: 6.25rem 0;
+      gap: 7rem;
+    }
+
+    & > .text__cta {
+      width: 100%;
+      max-width: 415px;
+
+      & > h2 {
+        font-weight: 700;
+        font-size: clamp(2.5rem, 3vw, 3rem);
+        color: white;
+        margin-bottom: 2.2rem;
+      }
+
+      & > p {
+        font-weight: 400;
+        font-size: 1.125rem;
+        color: white;
+        margin-bottom: 3rem;
+      }
+    }
+
+    .image_container {
+      max-width: 704px;
+      max-height: 575px;
+
+      & > img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

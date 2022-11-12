@@ -1,0 +1,18 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+a.learn_more {
+  @include flex;
+  text-decoration: none;
+  border: none;
+  background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+  border-radius: 8px;
+  width: 156px;
+  height: 48px;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Red Rose";
+  color: $color-purple;
+  text-align: center;
+}
