@@ -1,13 +1,5 @@
-import Hero from "containers/HomeLayout/hero";
-import Inspiration from "containers/HomeLayout/inspiration";
-import WalletTokens from "containers/HomeLayout/wallettokens";
+import HomeLayout from "containers/HomeLayout";
 
 export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <WalletTokens />
-      <Inspiration />
-    </main>
-  );
+  return <HomeLayout />;
 }

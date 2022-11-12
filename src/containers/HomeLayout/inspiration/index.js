@@ -11,9 +11,11 @@ export default function Inspiration() {
       <div className="container">
         <h2>Inspiration for your next adventure</h2>
 
-        {slicedData.map((item) => {
-          return <Place key={item.id} {...item} />;
-        })}
+        <div>
+          {slicedData.map((item) => {
+            return <Place key={item.id} {...item} />;
+          })}
+        </div>
       </div>
     </section>
   );
