@@ -1,12 +1,13 @@
-import Header from "components/Header";
+import Layout from "components/Layout";
 import RouteLinks from "routes";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Header />
-      <RouteLinks />
+      <Layout>
+        <RouteLinks />
+      </Layout>
     </>
   );
 }
