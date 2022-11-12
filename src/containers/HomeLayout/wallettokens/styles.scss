@@ -1,0 +1,26 @@
+@use "styles/mixins" as *;
+@use "styles/extends";
+
+section#wallet_tokens__partners {
+  width: 100%;
+  max-width: 1440px;
+  @extend .purple_gradient;
+
+  & > .container {
+    @extend .page_width;
+    padding: 0.7rem 0;
+    @include flex(center, space-between, row);
+    box-sizing: border-box;
+    gap: 1rem;
+
+    & > figure {
+      max-width: 222px;
+      max-height: 40px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
