@@ -1,0 +1,88 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+section#hero {
+  width: 100%;
+
+  & > .container {
+    @extend .page_width;
+    @include flex(center, space-between, column);
+    gap: 2rem;
+    margin: 3rem auto 2rem;
+    overflow-y: visible;
+    box-sizing: border-box;
+
+    @include mediaMin(tablet) {
+      margin: 6rem auto 4rem;
+      flex-direction: row;
+      gap: 0;
+    }
+
+    & > .texts__searchinput {
+      max-width: 646px;
+
+      & > h2 {
+        font-weight: 400;
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        margin-bottom: 3rem;
+
+        & > span {
+          font-size: clamp(2.5rem, 4vw, 3.5rem);
+          color: $color-purple;
+          font-weight: 700;
+        }
+      }
+
+      & > p {
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    & > .images {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+
+      @include mediaMin(tablet) {
+        @include flex(center, center, row);
+        height: 459px;
+      }
+
+      .group_one,
+      .group_two {
+        @include flex(center, center, row);
+        gap: 8px;
+
+        @include mediaMin(tablet) {
+          flex-direction: column;
+        }
+
+        & > figure {
+          max-width: 234px;
+          max-height: 176px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+        }
+      }
+
+      .group_one {
+        @include mediaMin(tablet) {
+          align-self: flex-end;
+        }
+      }
+      .group_two {
+        @include mediaMin(tablet) {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}

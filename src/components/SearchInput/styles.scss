@@ -1,0 +1,40 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+.searchinput__box {
+  width: 90%;
+  height: 3.375rem;
+  @include flex(center, center, row);
+  box-sizing: border-box;
+
+  & > input {
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    padding: 0 15px;
+    outline: none;
+    background: rgba(247, 247, 247, 0.1);
+    border: 1px solid #a3a3a3;
+    border-right: none;
+    border-radius: 8px 0px 0px 8px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #b8b8b8;
+    box-sizing: border-box;
+  }
+
+  & > button {
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+    @include border($color: $color-purple);
+    @extend .purple_gradient;
+    border-radius: 0px 8px 8px 0px;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+  }
+}

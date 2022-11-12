@@ -1,5 +1,10 @@
+import Hero from "containers/HomeLayout/hero";
 import React from "react";
 
 export default function Home() {
-  return <main>Home</main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }
