@@ -35,18 +35,20 @@
 
 .mobile__menu {
   position: absolute;
+  @include flex(center, center, column);
+  gap: 2rem;
   top: 0px;
   left: 0px;
   z-index: 5;
   width: 85%;
-  height: 80vh;
+  height: 85vh;
   max-width: 700px;
   margin: 0 auto;
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0;
   transform: translateY(-90%);
   opacity: 0;
   visibility: hidden;
-  background: $color-purple;
+  background: $color-300;
   transition: transform 0.5s ease-in-out;
 
   &.open {
@@ -70,16 +72,12 @@
         font-weight: 700;
         font-size: 2.5rem;
         line-height: 18px;
-        color: $color-300;
+        color: $color-purple;
 
         &:hover {
-          color: #4a7dff;
+          color: $color-300;
         }
       }
-    }
-
-    & > button {
-      padding: 20px 40px;
     }
   }
 }

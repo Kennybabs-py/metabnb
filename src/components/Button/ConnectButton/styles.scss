@@ -14,4 +14,61 @@ button.connect_wallet__btn {
   font-size: 1rem;
   color: #ffffff;
   @extend .purple_gradient;
+  cursor: pointer;
+}
+
+.connect_wallet__modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(64, 64, 64, 0.3);
+  display: none;
+
+  &.open {
+    display: inherit;
+  }
+
+  & > .container {
+    margin: auto;
+
+    background-color: white;
+    border-radius: 1rem;
+    width: 85%;
+    max-width: 600px;
+
+    & > .heading__close_btn {
+      @include flex(center, space-between, row);
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #cfd8dc;
+      box-sizing: border-box;
+
+      & > h2 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $color-400;
+      }
+
+      & > span {
+        color: #1a1a1a;
+        cursor: pointer;
+      }
+    }
+
+    & > .wallet_lists {
+      width: 100%;
+      padding: 2rem;
+      box-sizing: border-box;
+
+      & > h2 {
+        font-weight: 400;
+        font-size: 1rem;
+        color: $color-400;
+      }
+    }
+  }
 }

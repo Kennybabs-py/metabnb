@@ -6,6 +6,7 @@
 body {
   font-family: "Red Rose";
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
