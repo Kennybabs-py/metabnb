@@ -26,6 +26,8 @@ export default function ConnectWalletButton() {
 }
 
 export function ConnectWalletModal({ modalOpen, setModalOpen }) {
+  const [selected, setSelected] = useState(0);
+
   return (
     <div className={`connect_wallet__modal ${modalOpen ? "open" : ""}`}>
       <div className="container">
@@ -40,16 +42,20 @@ export function ConnectWalletModal({ modalOpen, setModalOpen }) {
 
           {walletLists.map((wallet) => {
             return (
-              <div key={wallet.id} className="wallet">
+              <div
+                key={wallet.id}
+                className={`wallet ${selected === wallet.id ? "selected" : ""}`}
+                onClick={() => {
+                  setSelected(wallet.id);
+                }}
+              >
                 <div>
                   <img src={wallet.image} alt={wallet.name} />
 
                   <span>{wallet.name}</span>
                 </div>
 
-                <span>
-                  <FaGreaterThan />
-                </span>
+                <FaGreaterThan />
               </div>
             );
           })}

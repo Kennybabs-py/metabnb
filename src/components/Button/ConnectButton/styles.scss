@@ -77,9 +77,12 @@ button.connect_wallet__btn {
         margin: 0 auto 1.5rem;
         padding: 12px;
         @include flex(center, space-between, row);
-        background: #f8f9fa;
         border: 1px solid #cfd8dc;
         border-radius: 12px;
+
+        &.selected {
+          background: #f8f9fa;
+        }
 
         & > div {
           @include flex(center, flex-start, row);
