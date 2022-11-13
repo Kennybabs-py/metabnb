@@ -1,3 +1,4 @@
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import "./styles.scss";
 import footerLogo from "assets/FooterLogo.svg";
 
@@ -45,9 +46,17 @@ export default function Footer() {
             </figure>
 
             <div className="social_links">
-              <a href="https://#">lin</a>
-              <a href="https://#">lin</a>
-              <a href="https://#">lin</a>
+              <a href="https://#">
+                <FaFacebookF />
+              </a>
+
+              <a href="https://#">
+                <FaInstagram />
+              </a>
+
+              <a href="https://#">
+                <FaTwitter />
+              </a>
             </div>
           </div>
 

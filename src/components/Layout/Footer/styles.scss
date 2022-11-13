@@ -41,8 +41,11 @@ footer {
           gap: 2.5rem;
 
           a {
-            color: white;
             text-decoration: none;
+
+            & > svg {
+              fill: #f7f7f7;
+            }
           }
         }
       }

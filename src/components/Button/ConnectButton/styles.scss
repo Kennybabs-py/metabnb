@@ -85,12 +85,21 @@ button.connect_wallet__btn {
           @include flex(center, flex-start, row);
           gap: 1rem;
 
+          img {
+            width: 44px;
+            height: 44px;
+          }
+
           & > span {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 600;
             font-size: 1.125rem;
             color: #000000;
           }
+        }
+
+        & > svg {
+          fill: #959da6;
         }
       }
     }
