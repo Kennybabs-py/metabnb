@@ -6,7 +6,7 @@ import "./styles.scss";
 
 const mobilenavs = [
   { id: 0, name: "Home", path: "/" },
-  { id: 1, name: "Place to stay", path: "/place-to-stay" },
+  { id: 1, name: "Place to stay", path: "/places" },
   { id: 2, name: "NFTs", path: "/" },
   { id: 3, name: "Community", path: "/" },
 ];
