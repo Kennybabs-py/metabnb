@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { FaGreaterThan } from "react-icons/fa";
 import "./styles.scss";
+import MetamaskIcon from "assets/MetaMaskIcon.svg";
+import WalletConnectIcon from "assets/WalletConnectIcon.svg";
 
 const walletLists = [
-  { id: 0, name: "Metamask", image: "" },
-  { id: 1, name: "WalletConnect", image: "" },
+  { id: 0, name: "Metamask", image: MetamaskIcon },
+  { id: 1, name: "WalletConnect", image: WalletConnectIcon },
 ];
 
 export default function ConnectWalletButton() {
@@ -34,6 +37,22 @@ export function ConnectWalletModal({ modalOpen, setModalOpen }) {
 
         <div className="wallet_lists">
           <h2>Choose your preferred wallets</h2>
+
+          {walletLists.map((wallet) => {
+            return (
+              <div key={wallet.id} className="wallet">
+                <div>
+                  <img src={wallet.image} alt={wallet.name} />
+
+                  <span>{wallet.name}</span>
+                </div>
+
+                <span>
+                  <FaGreaterThan />
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

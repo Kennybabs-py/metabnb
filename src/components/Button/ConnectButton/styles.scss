@@ -68,6 +68,30 @@ button.connect_wallet__btn {
         font-weight: 400;
         font-size: 1rem;
         color: $color-400;
+        margin-bottom: 1rem;
+      }
+
+      & > .wallet {
+        width: 100%;
+        max-width: 536px;
+        margin: 0 auto 1.5rem;
+        padding: 12px;
+        @include flex(center, space-between, row);
+        background: #f8f9fa;
+        border: 1px solid #cfd8dc;
+        border-radius: 12px;
+
+        & > div {
+          @include flex(center, flex-start, row);
+          gap: 1rem;
+
+          & > span {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: #000000;
+          }
+        }
       }
     }
   }
