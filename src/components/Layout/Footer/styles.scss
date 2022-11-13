@@ -20,7 +20,11 @@ footer {
 
       & > .logo__social_links {
         @include flex(flex-start, flex-start, column);
-        gap: 5rem;
+        gap: 3rem;
+
+        @include mediaMin(tablet) {
+          gap: 5rem;
+        }
 
         & > figure {
           max-width: 233px;

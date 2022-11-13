@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 
+import ConnectWalletButton from "components/Button/ConnectButton";
+import MobileNav from "components/MobileNav";
+
 import HeaderLogo from "assets/HeaderLogo.svg";
 import "./styles.scss";
-import ConnectWalletButton from "components/Button/ConnectButton";
 
 function Header() {
   return (
@@ -30,6 +32,8 @@ function Header() {
         </nav>
 
         <ConnectWalletButton />
+
+        <MobileNav />
       </div>
     </header>
   );

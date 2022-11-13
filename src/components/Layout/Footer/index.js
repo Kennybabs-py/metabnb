@@ -13,7 +13,7 @@ const navData = [
     ],
   },
   {
-    id: 0,
+    id: 1,
     category: "Places",
     links: [
       { id: 0, name: "Castle" },
@@ -23,7 +23,7 @@ const navData = [
     ],
   },
   {
-    id: 0,
+    id: 2,
     category: "About us",
     links: [
       { id: 0, name: "Road map" },
