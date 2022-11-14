@@ -47,6 +47,7 @@ export function ConnectWalletModal({ modalOpen, setModalOpen }) {
                 className={`wallet ${selected === wallet.id ? "selected" : ""}`}
                 onClick={() => {
                   setSelected(wallet.id);
+                  setModalOpen(false);
                 }}
               >
                 <div>

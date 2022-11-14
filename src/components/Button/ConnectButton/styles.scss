@@ -18,9 +18,11 @@ button.connect_wallet__btn {
 }
 
 .connect_wallet__modal {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   z-index: 20;
@@ -32,8 +34,9 @@ button.connect_wallet__btn {
   }
 
   & > .container {
+    position: sticky;
+    top: 10%;
     margin: auto;
-
     background-color: white;
     border-radius: 1rem;
     width: 85%;
