@@ -38,10 +38,15 @@ div.place {
 
   & > .distance__available {
     @include flex(center, space-between, row);
+    margin-bottom: 9px;
 
     & > span {
       font-size: 0.75rem;
       font-weight: 400;
     }
+  }
+
+  .star-svg {
+    fill: #a02279;
   }
 }

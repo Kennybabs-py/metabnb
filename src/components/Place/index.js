@@ -1,4 +1,4 @@
-import React from "react";
+import { Rating } from "react-simple-star-rating";
 import "./styles.scss";
 
 export default function Place(props) {
@@ -16,6 +16,10 @@ export default function Place(props) {
       <div className="distance__available">
         <span>{distance} away</span>{" "}
         <span>available for {availability} stay</span>
+      </div>
+
+      <div>
+        <Rating initialValue={5} iconsCount={5} readonly size={12} />
       </div>
     </div>
   );
