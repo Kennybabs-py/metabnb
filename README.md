@@ -6,7 +6,6 @@ This task is for stage three of the current HNG internship
 
 - React
 - Scss
--
 
 ### `yarn start`
 
