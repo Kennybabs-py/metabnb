@@ -1,0 +1,82 @@
+@use "styles/mixins" as *;
+@use "styles/variables" as *;
+@use "styles/extends";
+
+section#places {
+  width: 100%;
+
+  & > .container {
+    @extend .page_width;
+    padding: 2.5rem 0;
+    box-sizing: border-box;
+
+    @include mediaMin(tablet) {
+      padding: 5rem 0;
+    }
+
+    & > .categories__settings {
+      @include flex(flex-start, flex-start, column-reverse);
+      gap: 2rem;
+      margin-bottom: 4rem;
+
+      @include mediaMin(tablet) {
+        @include flex(center, flex-start, row);
+        gap: 4rem;
+      }
+
+      & > .categories {
+        @include flex(center, flex-start, row);
+        gap: 2rem;
+        width: 100%;
+        max-width: 940px;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        padding: 10px 0;
+
+        @include mediaMin(tablet) {
+          gap: 3rem;
+        }
+
+        & > span {
+          display: inline-block;
+          font-size: 0.875rem;
+          color: #434343;
+          text-align: center;
+
+          @include mediaMin(tablet) {
+            gap: 1.25rem;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      & > .settings {
+        background: #ffffff;
+        border: 1px solid #b4b4b4;
+        border-radius: 8px;
+        padding: 0.875rem;
+        @include flex(center, flex-start, row);
+        gap: 2.6rem;
+
+        & > span {
+          font-size: 1rem;
+          color: $color-400;
+        }
+
+        & > svg {
+          rotate: -90deg;
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: $color-400;
+        }
+      }
+    }
+
+    & > .places_list {
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem 0;
+    }
+  }
+}

@@ -1,5 +1,9 @@
-import React from "react";
+import PlacesLayout from "containers/PlacesLayout";
 
 export default function Places() {
-  return <main>Home</main>;
+  return (
+    <main>
+      <PlacesLayout />
+    </main>
+  );
 }
