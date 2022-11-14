@@ -5,6 +5,9 @@
 header {
   width: 100%;
   padding: 2.7rem 0;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(5px);
 
   & > .container {
     @include flex(center, space-between, row);
@@ -50,12 +53,9 @@ header {
       }
     }
 
-    & > button {
-      display: none;
-
-      @include mediaMin(tablet) {
-        display: inline-block;
-      }
+    .connect__hamburger {
+      @include flex(center, flex-start, row);
+      gap: 1rem;
     }
   }
 }

@@ -1,4 +1,3 @@
-import ConnectWalletButton from "components/Button/ConnectButton";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -51,8 +50,6 @@ export default function MobileNav() {
             );
           })}
         </ul>
-
-        <ConnectWalletButton />
       </div>
     </>
   );

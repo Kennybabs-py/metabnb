@@ -5,16 +5,22 @@
 button.connect_wallet__btn {
   display: inline-block;
   border: none;
-  width: 170px;
-  height: 48px;
+  width: 120px;
+  height: 35px;
   border-radius: 10px;
   text-align: center;
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 12px;
   color: #ffffff;
   @extend .purple_gradient;
   cursor: pointer;
+
+  @include mediaMin(tablet) {
+    width: 170px;
+    height: 48px;
+    font-size: 1rem;
+  }
 }
 
 .connect_wallet__modal {
@@ -34,13 +40,12 @@ button.connect_wallet__btn {
   }
 
   & > .container {
-    position: sticky;
-    top: 10%;
-    margin: auto;
+    margin: 8% auto;
     background-color: white;
     border-radius: 1rem;
     width: 85%;
     max-width: 600px;
+    max-height: 326px;
 
     & > .heading__close_btn {
       @include flex(center, space-between, row);

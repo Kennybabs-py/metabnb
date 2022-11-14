@@ -31,9 +31,10 @@ function Header() {
           </ul>
         </nav>
 
-        <ConnectWalletButton />
-
-        <MobileNav />
+        <div className="connect__hamburger">
+          <ConnectWalletButton />
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
