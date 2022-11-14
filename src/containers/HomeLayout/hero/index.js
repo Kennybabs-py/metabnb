@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="container">
         <div className="texts__searchinput">
           <h2>
-            Rent a <span>Place</span> Away from <span>Home</span> in the{" "}
+            Rent a <span>Place</span> away from <span>Home</span> in the{" "}
             <span>Metaverse</span>
           </h2>
 

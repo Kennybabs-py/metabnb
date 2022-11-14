@@ -20,7 +20,7 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/places">Place to Stay</Link>
+              <Link to="/place-to-stay">Place to Stay</Link>
             </li>
             <li>
               <Link to="/">NFTs</Link>
