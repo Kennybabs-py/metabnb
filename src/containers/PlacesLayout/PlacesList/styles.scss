@@ -37,9 +37,11 @@ section#places {
           gap: 3rem;
         }
 
-        & > span {
+        & > button {
           display: inline-block;
           font-size: 0.875rem;
+          border: none;
+          background-color: inherit;
           color: #434343;
           text-align: center;
 

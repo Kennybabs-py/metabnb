@@ -23,7 +23,7 @@ export default function PlacesList() {
         <div className="categories__settings">
           <div className="categories">
             {categories.map((item, index) => {
-              return <span key={index}>{item}</span>;
+              return <button key={index}>{item}</button>;
             })}
           </div>
 
