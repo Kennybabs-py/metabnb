@@ -23,7 +23,7 @@ section#hero {
       max-width: 650px;
 
       & > h2 {
-        font-weight: 500;
+        font-weight: 500; //using a font weight of 700 shows a white stroke when using Red rose as font.
         font-size: clamp(2.5rem, 4vw, 3.5rem);
         margin-bottom: 3rem;
 
